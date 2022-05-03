@@ -38,6 +38,8 @@ Svelte 컴포넌트는요...
 
 script에서 정의한 변수를 중괄호({})에 야\~무지게 넣어줄게요!
 
+{% tabs %}
+{% tab title="코드" %}
 ```html
 <script>
     let name = 'minnsane';
@@ -45,27 +47,33 @@ script에서 정의한 변수를 중괄호({})에 야\~무지게 넣어줄게요
 
 <h1>Hello {name}!</h1>
 ```
+{% endtab %}
 
-{% hint style="success" %}
-Hello minnsane!
-{% endhint %}
+{% tab title="Second Tab" %}
+`Hello minnsane!`
+{% endtab %}
+{% endtabs %}
 
 중괄호 안에는 js 함수를 써서 좀 더 다양하게 인사할 수도 있어요.
 
+{% tabs %}
+{% tab title="코드" %}
 ```html
 <script>
-	let name = 'minnsane';
+  let name = 'minnsane';
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
 <h1>Hello {name.slice(0, 3)}!</h1>
 ```
+{% endtab %}
 
-{% hint style="success" %}
-Hello MINNSANE!
+{% tab title="결과" %}
+`Hello MINNSANE!`
 
-Hello min!
-{% endhint %}
+`Hello min!`
+{% endtab %}
+{% endtabs %}
 
 ### 동적 Attribute
 
@@ -93,3 +101,72 @@ attribute의 속성명과 할당 할 변수명이 같다면 다음과 같이 짧
 ```html
 <img {src} alt="src is src">
 ```
+
+### 스타일
+
+HTML 파일과 같이, \<style> 태그를 추가할 수 있어요.
+
+다만, 컴포넌트 파일 내부의 style 태그 내용은 **해당 컴포넌트에만 적용**됩니다!
+
+(하위에 같은 태그를 가진 컴포넌트가 있더라도 영향이 가지 않음)
+
+{% tabs %}
+{% tab title="코드" %}
+```html
+<p>This is a paragraph.</p>
+
+<style>
+  p {
+    color: red;
+  }
+</style>
+```
+{% endtab %}
+
+{% tab title="결과" %}
+<mark style="color:red;">`This is a paragraph.`</mark>
+{% endtab %}
+{% endtabs %}
+
+### HTML 태그
+
+보통 string은 text로 그냥 보여지지만, \<br>이나 \<strong> 같은 HTML 태그를 컴포넌트에 적용하고 싶다면, **@html**을 이용하세요!
+
+{% tabs %}
+{% tab title="코드" %}
+```html
+<script>
+  let string = `this string contains <br>some <strong>HTML!!!</strong>`;
+  let htmlString = `this string contains <br>some <strong>HTML!!!</strong>`;
+</script>
+
+<p>{string}</p>
+<p>{@html htmlString}</p>
+```
+{% endtab %}
+
+{% tab title="결과" %}
+`this string contains <br>some <strong>HTML!!!</strong>`
+
+`this string contains`\
+`some`` `**`HTML!!!`**
+{% endtab %}
+{% endtabs %}
+
+{% hint style="warning" %}
+Svelte는 해당 string을 DOM에 삽입하기 전에 보안안정성을 확인하지 않습니. 위 기능을 이용하기 전에 XSS 공격에 취약하지 않은지 직접 확인해야 합니다.
+{% endhint %}
+
+### 컴포넌트 사용하기
+
+Svelte에서 만들어진 컴포넌트를 사용하는 것은 아\~주 쉽습니다. 우리가 다 아는 문법인 new를 통해 import하면 됩니다! 컴파일러가 컴포넌트들을 JS 클래스로 변환해주거든요.
+
+```javascript
+import App from './App.svelte';
+
+const app = new App({
+  target: document.body
+});
+```
+
+> 컴포넌트는 Upper Case로 시작하는 것이 컨벤션입니다.

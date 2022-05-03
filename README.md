@@ -1,9 +1,9 @@
 ---
+description: The secret of getting ahead is getting started.
 coverY: 0
 ---
 
-# Test
+# Hello, World!
 
-## Welcome aboard!
+##
 
-Welcome to the company wiki! Here you'll find everything you need to know about the company.

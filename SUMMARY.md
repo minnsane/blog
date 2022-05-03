@@ -4,4 +4,4 @@
 
 ## Svelte 101
 
-* [01. Introduction](svelte-101/01.-introduction.md)
+* [01. Introduction](svelte-101/page-1.md)

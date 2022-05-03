@@ -16,7 +16,7 @@ React, Vue, Angular.. 세상에 이렇게 많은 웹 프레임워크(라이브�
 
 그리고 무엇보다.. 2019년부터 만족스러운 프레임워크 랭킹 2위 아래로 내려간적이 없다고 하니깐여...?! ([링크](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks))
 
-## 컴포넌
+## Component
 
 Svelte 어플리케이션은 컴포넌트로 이루어져 있습니다.
 
@@ -67,3 +67,29 @@ Hello MINNSANE!
 Hello min!
 {% endhint %}
 
+### 동적 Attribute
+
+텍스트 추가하듯, element attribute도 중괄호에 아래와 같이 추가할 수 있어요.
+
+```html
+<img src={src}>
+```
+
+이 때 Svelte는 웹 접근성을 위해 alt를 추가하라고 경고를 할 거에요!
+
+> <mark style="color:orange;">A11y:  element should have an alt attribute</mark>
+
+웹 접근성은 항상 갖추긴 쉽지 않지만, 가능한 한 따르며 더 많은 사람/기계가 이해할 수 있는 어플리케이션을 만들어 봅시당..!!
+
+```html
+<img src={src} alt="Minnsane's blog">
+<img src={src} alt="{name}'s blog"> //name 변수를 동적으로 할당도 가능!
+```
+
+#### 짧게 쓰기
+
+attribute의 속성명과 할당 할 변수명이 같다면 다음과 같이 짧게 쓰기도 가능합니다.
+
+```html
+<img {src} alt="src is src">
+```

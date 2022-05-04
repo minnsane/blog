@@ -24,7 +24,7 @@ Svelte 컴포넌트는요...
 
 * 재사용이 가능하고,
 * HTML, CSS, JavaScript를 한데 뭉쳐놓은
-* .svelte 파일입니
+* .svelte 파일입니다.
 
 ### 데이터 추가하기
 
@@ -49,7 +49,7 @@ script에서 정의한 변수를 중괄호({})에 야\~무지게 넣어줄게요
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="결과" %}
 `Hello minnsane!`
 {% endtab %}
 {% endtabs %}

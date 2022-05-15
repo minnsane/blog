@@ -107,13 +107,13 @@ each 블럭은 디폴트로 리스트의 가장 뒤쪽에 추가/삭제를 수�
 
 위 코드를 실행했을 때, 아래와 같은 화면이 보일거에요.
 <figure>
-<img src="./assets/04-01.png" alt="Svelte List Result" />
+<img src="./assets/04-01.png" alt="Svelte List Result" style="border: 1px solid gray"/>
 </figure>
 
 _**Remove first thing**_ 버튼을 클릭하면, 우리는 당!연!히! 리스트 맨 첫 요소가 삭제될 것이라고 생각하죠. 그치만, 짜잔-
 
 <figure>
-<img src="./assets/04-02.png" alt="Svelte List Result after Removing First Element" />
+<img src="./assets/04-02.png" alt="Svelte List Result after Removing First Element"  style="border: 1px solid gray"/>
 </figure>
 
 *App*의 *thing[0]* 는 삭제되었지만, *Thing*에서 매핑된 *emoji*는 업데이트 되지 않은 것 같아요. *Thing* 컴포넌트가 처음 생성될 때, *emoji*가 생성된 후 *App*에서 넘겨준 *name*이 업데이트 되어도, 영향을 받지 않았기 때문입니다.

@@ -5,5 +5,3 @@ coverY: 0
 
 # Hello, World!
 
-##
-

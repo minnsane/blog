@@ -73,11 +73,11 @@ each 블럭은 디폴트로 리스트의 가장 뒤쪽에 추가/삭제를 수�
 ```html
 <script>
   const emojis = {
-        apple: "🍎",
-        banana: "🍌",
-        carrot: "🥕",
-        doughnut: "🍩",
-        egg: "🥚"
+    apple: "🍎",
+    banana: "🍌",
+    carrot: "🥕",
+    doughnut: "🍩",
+    egg: "🥚"
   }
 
   export let name;

@@ -47,7 +47,7 @@ Svelte의 inline 핸들러는 두가지 특징이 있어요.
 
 `dispatch(`_`eventName`_`, `_`eventDetail`_`)`
 
-```js
+```javascript
   import { createEventDispatcher } from 'svelte';
 
   const dispatch = createEventDispatcher();
@@ -93,7 +93,7 @@ GrandParent
 ```
 {% endtab %}
 {% tab title="Child" %}
-```js
+```javascript
 import { createEventDispatcher } from 'svelte';
 
 const dispatch = createEventDispatcher();

@@ -105,11 +105,11 @@ DOM에서는 모든게 string이라 숫자를 다룰 때 좀 귀차나여.. inpu
 {% tab title="코드" %}
 ```html
 <select multiple bind:value={flavours}>
-	{#each menu as flavour}
-	<option value={flavour}>
-		{flavour}
-	</option>
-	{/each}
+  {#each menu as flavour}
+  <option value={flavour}>
+    {flavour}
+  </option>
+  {/each}
 </select>
 ```
 {% endtab %}
@@ -137,24 +137,24 @@ input이 아닌 element여도 `contenteditable=true` 속성이 있다면, input�
 ```html
 <script>
   let todos = [
-		{ done: false, text: 'finish Svelte tutorial' },
-		{ done: false, text: 'build an app' },
-		{ done: false, text: 'world domination' }
-	];
+    { done: false, text: 'finish Svelte tutorial' },
+    { done: false, text: 'build an app' },
+    { done: false, text: 'world domination' }
+  ];
 </script>
 
 {#each todos as todo}
-	<div class:done={todo.done}>
-		<input
-			type=checkbox
-			bind:checked={todo.done}
-		>
+  <div class:done={todo.done}>
+    <input
+      type=checkbox
+      bind:checked={todo.done}
+    >
 
-		<input
-			placeholder="What needs to be done?"
-			value={todo.text}
-		>
-	</div>
+    <input
+      placeholder="What needs to be done?"
+      value={todo.text}
+    >
+  </div>
 {/each}
 ```
 
@@ -232,9 +232,9 @@ DOM에 바인딩하듯이, 컴포넌트의 인스턴스에도 바인딩할 수 �
 {% tab title="App" %}
 ```html
 <script>
-	import InputField from './InputField.svelte';
+  import InputField from './InputField.svelte';
 
-	let field;
+  let field;
 </script>
 
 <InputField bind:this={field}/>
@@ -245,11 +245,11 @@ DOM에 바인딩하듯이, 컴포넌트의 인스턴스에도 바인딩할 수 �
 {% tab title="InputField" %}
 ```html
 <script>
-	let input;
+  let input;
 
-	export function focus() {
-		input.focus();
-	}
+  export function focus() {
+    input.focus();
+  }
 </script>
 
 <input bind:this={input} />

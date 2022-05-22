@@ -8,3 +8,4 @@
 * [05. Events](svelte-101/05-events.md)
 * [06. Bindings](svelte-101/06-bindings.md)
 * [07. Lifecycle](svelte-101/07-lifecycle.md)
+* [08. Stores](svelte-101/08-stores.md)

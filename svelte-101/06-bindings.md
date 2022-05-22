@@ -122,7 +122,7 @@ DOM에서는 모든게 string이라 숫자를 다룰 때 좀 귀차나여.. inpu
 {% endtab %}
 {% endtabs %}
 
-### Contenteditable 바인딩
+## Contenteditable 바인딩
 
 input이 아닌 element여도 `contenteditable=true` 속성이 있다면, input을 받고 `textContent`나 `innerHTML`에 value를 바인딩할 수 있어요!
 
@@ -130,7 +130,7 @@ input이 아닌 element여도 `contenteditable=true` 속성이 있다면, input�
 <div contenteditable="true" bind:innerHTML={html}></div>
 ```
 
-### Each 블록 바인딩
+## Each 블록 바인딩
 
 `each` 블록 안에서도 바인딩을 할 수 있어요.
 
@@ -160,7 +160,7 @@ input이 아닌 element여도 `contenteditable=true` 속성이 있다면, input�
 
 이런식의 input에 바인딩해 변수를 조작하는 패턴은 *todos*의 immutablity를 유지하지 못합니다. Immutable한 상태를 유지하고 싶다면, 이벤트 핸들러를 사용해야 해요!
 
-### 미디어
+## 미디어
 
 `<audio> `나 `<video>` 태그의 고유 property들도 바인딩하여 손쉽게 사용할 수 있습니다.
 
@@ -196,14 +196,14 @@ input이 아닌 element여도 `contenteditable=true` 속성이 있다면, input�
 |`videoHeight`|✅||
 
 
-### Dimensions
+## Dimensions
 
 모든 블록레벨 element들은 `clientWidth`, `clientHeight`, `offsetWidth`, `offsetHeight`를 readonly로 바인딩할 수 있습니다.
 
 ```html
 <div style="display:inline-block" bind:clientWidth={w} bind:clientHeight={h}></div>
 ```
-### This
+## This
 
 DOM에서 검색하지 않아도 바로 element를 바인딩 시킬 수 있습니다. 넘 꿀인것...
 
@@ -212,7 +212,7 @@ DOM에서 검색하지 않아도 바로 element를 바인딩 시킬 수 있습�
 <!-- 위 input은 컴포넌트 내 코드에서 inputEl이라는 이름으로 참조할 수 있음 -->
 ```
 
-### 컴포넌트 바인딩
+## 컴포넌트 바인딩
 
 DOM에 바인딩해주듯, 컴포넌트에도 바인딩이 가능합니다. 이렇게 바인딩 된 요소는 부모와 자식 컴포넌트에서 양방향으로 업데이트 가능하죠!
 

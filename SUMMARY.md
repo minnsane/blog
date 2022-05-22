@@ -7,3 +7,4 @@
 * [04. Logic](svelte-101/04-logic.md)
 * [05. Events](svelte-101/05-events.md)
 * [06. Bindings](svelte-101/06-bindings.md)
+* [07. Lifecycle](svelte-101/07-lifecycle.md)
